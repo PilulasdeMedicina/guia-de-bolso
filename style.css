@@ -1,0 +1,218 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --primary-yellow: #FFC107;
+    --accent-green: #2ECC71;
+    --dark-text: #333333;
+    --light-bg: #fdfdfd;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* Cabeçalho Amarelo */
+header {
+    background-color: var(--primary-yellow);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.header-content h1 {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--white);
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Layout Principal */
+.container {
+    max-width: 1000px;
+    margin: -30px auto 40px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Imagem do Produto */
+.product-image {
+    flex: 1;
+    text-align: center;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+}
+
+/* Conteúdo e Texto */
+.content-section {
+    flex: 1.2;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: #444;
+    line-height: 1.1;
+    text-align: justify;
+}
+
+/* Lista de Benefícios */
+.benefits-list {
+    list-style: none;
+    margin-bottom: 35px;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.check {
+    background-color: var(--accent-green);
+    color: white;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin-right: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Botão e Chamada */
+.cta-area {
+    text-align: center;
+}
+
+.cta-button {
+    display: block;
+    background-color: var(--accent-green);
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+}
+
+.secure-text {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    header { padding: 40px 15px 60px; }
+    .header-content h1 { font-size: 1.8rem; }
+    
+    .container {
+        flex-direction: column;
+        margin: -40px 15px 20px;
+        padding: 25px;
+    }
+
+    .product-image img { max-width: 250px; }
+    .subtitle { font-size: 1.1rem; text-align: justify; }
+}
+
+/* Estilos da Segunda Seção (Mais Larga) */
+.details-section {
+    background-color: #f9f9f9; /* Um cinza bem leve para diferenciar da seção de cima */
+    padding: 80px 0;
+    width: 100%;
+}
+
+.container-wide {
+    max-width: 1200px; /* Mais largo que os 1000px da seção principal */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px; /* Espaço maior entre imagem e texto */
+    padding: 0 20px;
+}
+
+.details-image {
+    flex: 1.5; /* A imagem ganha um pouco mais de destaque */
+}
+
+.details-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.details-text {
+    flex: 1;
+}
+
+.details-text h2 {
+    color: var(--primary-yellow);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.details-text h3 {
+    margin: 25px 0 10px;
+    color: var(--dark-text);
+}
+
+.details-text p {
+    text-align: justify;
+    line-height: 1.4; /* Ajustado conforme sua preferência */
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Ajuste de Responsividade para a nova seção */
+@media (max-width: 992px) {
+    .container-wide {
+        flex-direction: column; /* No celular, a imagem fica em cima do texto */
+        text-align: center;
+    }
+    
+    .details-text p {
+        text-align: left; /* No celular, o justificado às vezes fica estranho */
+    }
+}
