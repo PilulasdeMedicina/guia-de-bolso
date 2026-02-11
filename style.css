@@ -172,7 +172,7 @@ footer {
 }
 
 .details-image {
-    /*flex: 1.5;  A imagem ganha um pouco mais de destaque */
+    flex: 1.5;  /*A imagem ganha um pouco mais de destaque */
 }
 
 .details-image img {
