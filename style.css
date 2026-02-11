@@ -213,6 +213,6 @@ footer {
     }
     
     .details-text p {
-        text-align: left; /* No celular, o justificado às vezes fica estranho */
+        text-align: justify; /* No celular, o justificado às vezes fica estranho */
     }
 }
